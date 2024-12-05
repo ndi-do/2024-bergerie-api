@@ -8,4 +8,12 @@ export const loginValidator = vine.compile(
   })
 )
 
+export const registerValidator = vine.compile(
+  vine.object({
+    email: vine.string().email(),
+    password: vine.string(),
+  })
+)
+
 export type LoginSchema = Infer<typeof loginValidator>
+export type RegisterSchema = Infer<typeof registerValidator>
