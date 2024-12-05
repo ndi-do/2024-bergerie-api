@@ -12,6 +12,7 @@ export const registerValidator = vine.compile(
   vine.object({
     email: vine.string().email(),
     password: vine.string(),
+    fullName: vine.string(),
   })
 )
 
