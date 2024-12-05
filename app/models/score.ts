@@ -9,7 +9,7 @@ export default class Score extends BaseModel {
   declare id: string
 
   @column()
-  declare value: string
+  declare value: number
 
   @column()
   declare type: string
