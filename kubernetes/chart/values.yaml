@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/ndi-do/2024-bergerie-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "04a0d6aa0cd6054084ff02d6ad2c10258761566b"
+  tag: "393fd08f4c6b44d6fef310de18ca001060871832"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -51,16 +51,19 @@ service:
   port: 3333
 
 ingress:
-  enabled: false
-  className: ""
-  annotations: {}
+  enabled: true
+  className: "traefik"
+  annotations: {
+    "kubernetes.io/ingress.class": "traefik",
+    "traefik.ingress.kubernetes.io/router.tls": "false",
+  }
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: api.ndi.bonnal.cloud
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
