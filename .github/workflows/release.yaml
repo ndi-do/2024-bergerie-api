@@ -56,7 +56,7 @@ jobs:
           VERSION: ${{ github.sha }} 
         run: |
           echo "Déploiement de la version $VERSION"
-          yq -ie ".api.image.tag = \"$VERSION\"" applications/api/helm/values.yaml
+          yq -ie ".ndi-api.image.tag = \"$VERSION\"" applications/api/helm/values.yaml
       - name: Commit changes          
         run: |
           git config user.name "GitHub Actions"
