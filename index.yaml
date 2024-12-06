@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  ndi-api:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-06T02:08:56.162727+01:00"
+    description: api for bergerie
+    digest: ab81c156170ac1f5744cd82a1303230bb35d6b20638078a0bd50dcd4dae77dc2
+    name: ndi-api
+    type: application
+    urls:
+    - https://ndi-do.github.io/2024-bergerie-api/ndi-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-06T02:08:56.161823+01:00"
