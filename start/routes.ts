@@ -13,6 +13,7 @@ import { middleware } from './kernel.js'
 const ScoresController = async () => await import('#controllers/scores_controller')
 const AuthController = async () => await import('#controllers/auth_controller')
 const LeaderboardController = async () => await import('#controllers/leaderboards_controller')
+const HealthCheckController = async () => await import('#controllers/health_checks_controller')
 
 router
   .group(() => {
@@ -23,3 +24,5 @@ router
 router.get('/leaderboard', [LeaderboardController, 'index'])
 router.post('/auth/login', [AuthController, 'login'])
 router.post('/auth/register', [AuthController, 'register'])
+
+router.get('/health', [HealthCheckController, 'handle'])
