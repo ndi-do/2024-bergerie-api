@@ -56,12 +56,12 @@ jobs:
           VERSION: ${{ github.sha }} 
         run: |
           echo "Déploiement de la version $VERSION"
-          yq -ie ".api.image.tag = \"$VERSION\"" applications/api/chart/values.yaml
+          yq -ie ".api.image.tag = \"$VERSION\"" applications/api/helm/values.yaml
       - name: Commit changes          
         run: |
           git config user.name "GitHub Actions"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git addapplications/api/chart/values.yaml
+          git addapplications/api/helm/values.yaml
           git commit -m "Deploying the $VERSION version"
           git push
         env:
