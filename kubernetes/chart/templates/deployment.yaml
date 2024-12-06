@@ -44,7 +44,7 @@ spec:
             - name: PORT
               value: "{{ .Values.service.port }}"
             - name: HOST
-              value: "localhost"
+              value: "0.0.0.0"
             - name: NODE_ENV
               value: "production"
             - name: LOG_LEVEL
