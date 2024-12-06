@@ -29,5 +29,5 @@ COPY ./pnpm-lock.yaml .
 #RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod
 COPY --from=build /home/node/app/build .
 COPY --from=build /home/node/app/node_modules ./node_modules
-EXPOSE 80
+EXPOSE 3333
 CMD ["dumb-init", "node", "bin/server.js"]
