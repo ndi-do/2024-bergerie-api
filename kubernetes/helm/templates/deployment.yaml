@@ -47,23 +47,25 @@ spec:
               value: "localhost"
             - name: NODE_ENV
               value: "production"
+            - name: LOG_LEVEL
+              value: "info"
             - name: APP_KEY
               value: pVXhqXpOT70BtGouSy4fxJbMIKIQQa_p
-            - name: DB_HOST:
-              value: {{ .Values.database.host}}
-            - name: DB_PORT:
-              value: 5432
-            - name: DB_USER:
+            - name: DB_HOST
+              value: "{{ .Values.database.host }}"
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_USER
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.database.existingSecret }}
                   key: {{ .Values.database.existingSecretUserKey }}
-            - name: DB_PASSWORD:
+            - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.database.existingSecret }}
                   key: {{ .Values.database.existingSecretPasswordKey }}
-            - name: DB_DATABASE:
+            - name: DB_DATABASE
               value: {{ .Values.database.name }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}

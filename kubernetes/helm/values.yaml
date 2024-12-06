@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/ndi-do/2024-bergerie-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "04a0d6aa0cd6054084ff02d6ad2c10258761566b"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -48,7 +48,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 3333
 
 ingress:
   enabled: false
@@ -78,14 +78,14 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /health
-    port: http
-readinessProbe:
-  httpGet:
-    path: /health
-    port: http
+# livenessProbe:
+#   httpGet:
+#     path: /health
+#     port: http
+# readinessProbe:
+#   httpGet:
+#     path: /health
+#     port: http
 
 autoscaling:
   enabled: false
