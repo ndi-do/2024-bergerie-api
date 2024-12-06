@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  ndi-api:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-06T02:14:53.825651+01:00"
+    description: api for bergerie
+    digest: 7794cae5a88ccd27b161973ea3019ae0b973e541cfb1c59d453f779b04773ccc
+    name: ndi-api
+    sources:
+    - https://github.com/ndi-do/2024-bergerie-api/tree/main/kubernetes/helm
+    type: application
+    urls:
+    - ndi-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-06T02:14:53.825106+01:00"
