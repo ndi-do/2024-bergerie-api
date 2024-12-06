@@ -1,0 +1,8 @@
+apiVersion: v2
+name: ndi-api
+description: api for bergerie
+
+type: application
+
+version: 0.1.0
+appVersion: "1.16.0"
