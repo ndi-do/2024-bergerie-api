@@ -11,6 +11,6 @@ entries:
       - https://github.com/ndi-do/2024-bergerie-api/tree/main/kubernetes/helm
     type: application
     urls:
-    - https://ndi-do.github.io/2024-bergerie-api/ndi-api-0.1.0.tgz
+    - kanri-0.1.0.tgz
     version: 0.1.0
 generated: "2024-12-06T01:54:04.941659+01:00"
