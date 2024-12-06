@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  ndi-api:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-06T02:52:40.547363+01:00"
+    description: api for bergerie
+    digest: 58194f863f7e389d692a633f7f9018ffdf9400835d15bfc3b08489625dd251b8
+    name: ndi-api
+    sources:
+    - https://github.com/ndi-do/2024-bergerie-api/tree/main/kubernetes/chart
+    type: application
+    urls:
+    - ndi-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-06T02:52:40.546218+01:00"
